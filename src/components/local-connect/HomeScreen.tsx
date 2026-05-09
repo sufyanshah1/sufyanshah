@@ -4,8 +4,9 @@ import { Tabs, type Tab } from "./Tabs";
 import { Recommended } from "./Recommended";
 import { Filters, type Filter } from "./Filters";
 import { CallLogItem } from "./CallLogItem";
+import { ContactItem } from "./ContactItem";
 import { BottomNav } from "./BottomNav";
-import { callLogs } from "./data";
+import { callLogs, recommended } from "./data";
 
 export function HomeScreen() {
   const [tab, setTab] = useState<Tab>("History");
@@ -28,16 +29,25 @@ export function HomeScreen() {
         <Header />
         <Tabs active={tab} onChange={setTab} />
         <Recommended />
-        <Filters active={filter} onChange={setFilter} />
-
-        <main className="flex-1 divide-y divide-border bg-background">
-          {filtered.map((log, i) => (
-            <CallLogItem key={log.id} log={log} index={i} />
-          ))}
-          {filtered.length === 0 && (
-            <p className="py-12 text-center text-sm text-muted-foreground">No calls match this filter.</p>
-          )}
-        </main>
+        {tab === "Contacts" ? (
+          <main className="flex-1 divide-y divide-border bg-background">
+            {recommended.map((c, i) => (
+              <ContactItem key={c.id} contact={c} index={i} />
+            ))}
+          </main>
+        ) : (
+          <>
+            <Filters active={filter} onChange={setFilter} />
+            <main className="flex-1 divide-y divide-border bg-background">
+              {filtered.map((log, i) => (
+                <CallLogItem key={log.id} log={log} index={i} />
+              ))}
+              {filtered.length === 0 && (
+                <p className="py-12 text-center text-sm text-muted-foreground">No calls match this filter.</p>
+              )}
+            </main>
+          </>
+        )}
 
         <BottomNav />
       </div>
