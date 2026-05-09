@@ -7,12 +7,12 @@ export type Tab = (typeof TABS)[number];
 export function Tabs({ active, onChange }: { active: Tab; onChange: (t: Tab) => void }) {
   return (
     <div className="border-b border-border bg-background">
-      <div className="flex items-stretch px-2">
+      <div className="flex items-stretch w-full">
         {TABS.map((tab) => (
           <button
             key={tab}
             onClick={() => onChange(tab)}
-            className="relative py-3 px-2 text-sm font-medium transition-colors"
+            className="relative flex-1 py-3 text-sm font-medium transition-colors"
           >
             <span
               className={`inline-flex items-center justify-center gap-1.5 ${
