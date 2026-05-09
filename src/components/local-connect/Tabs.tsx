@@ -7,7 +7,7 @@ export type Tab = (typeof TABS)[number];
 export function Tabs({ active, onChange }: { active: Tab; onChange: (t: Tab) => void }) {
   return (
     <div className="border-b border-border bg-background">
-      <div className="flex items-stretch w-full">
+      <div className="flex items-stretch w-full px-[16px] py-0">
         {TABS.map((tab) => (
           <button
             key={tab}
