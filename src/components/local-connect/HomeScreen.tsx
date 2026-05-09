@@ -4,8 +4,9 @@ import { Tabs, type Tab } from "./Tabs";
 import { Recommended } from "./Recommended";
 import { Filters, type Filter } from "./Filters";
 import { CallLogItem } from "./CallLogItem";
+import { ContactItem } from "./ContactItem";
 import { BottomNav } from "./BottomNav";
-import { callLogs } from "./data";
+import { callLogs, recommended } from "./data";
 
 export function HomeScreen() {
   const [tab, setTab] = useState<Tab>("History");
