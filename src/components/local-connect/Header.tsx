@@ -79,6 +79,14 @@ export function Header() {
           )}
         </motion.div>
 
+        <button
+          onClick={toggle}
+          aria-label="Toggle theme"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-muted transition-colors hover:bg-secondary"
+        >
+          {dark ? <Sun className="h-5 w-5 text-foreground" /> : <Moon className="h-5 w-5 text-foreground" />}
+        </button>
+
         <button className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-muted transition-colors hover:bg-secondary">
           <Plus className="h-5 w-5 text-foreground" />
         </button>
