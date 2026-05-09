@@ -7,7 +7,7 @@ export type Tab = (typeof TABS)[number];
 export function Tabs({ active, onChange }: { active: Tab; onChange: (t: Tab) => void }) {
   return (
     <div className="border-b border-border bg-background">
-      <div className="flex overflow-x-auto px-4">
+      <div className="flex items-stretch overflow-x-auto px-4">
         {TABS.map((tab) => (
           <button
             key={tab}
@@ -20,7 +20,6 @@ export function Tabs({ active, onChange }: { active: Tab; onChange: (t: Tab) => 
               }`}
             >
               {tab}
-              {tab === "Favorites" && <Menu className="h-4 w-4" />}
             </span>
             {active === tab && (
               <motion.div
@@ -31,6 +30,14 @@ export function Tabs({ active, onChange }: { active: Tab; onChange: (t: Tab) => 
             )}
           </button>
         ))}
+        <button
+          type="button"
+          aria-label="Favorites menu"
+          onClick={() => onChange("Favorites")}
+          className="ml-1 flex items-center justify-center rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground active:scale-95"
+        >
+          <Menu className="h-5 w-5" />
+        </button>
       </div>
     </div>
   );
