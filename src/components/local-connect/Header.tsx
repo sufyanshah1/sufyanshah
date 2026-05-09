@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Search, Plus, MoreVertical, X, Ban, UserPlus, SimCard, Settings } from "lucide-react";
+import { Search, Plus, MoreVertical, X, Ban, UserPlus, Smartphone, Settings } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export function Header() {
@@ -26,7 +26,7 @@ export function Header() {
   const menuItems = [
     { label: "Block Contact", icon: Ban, color: "text-danger" },
     { label: "Add Contact", icon: UserPlus, color: "text-verified" },
-    { label: "Set Default SIM", icon: SimCard, color: "text-sim2" },
+    { label: "Set Default SIM", icon: Smartphone, color: "text-sim2" },
     { label: "Settings", icon: Settings, color: "text-muted-foreground" },
   ];
 
