@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { Search, Plus, MoreVertical, X, Ban, UserPlus, Smartphone, Settings } from "lucide-react";
+import { Search, Plus, MoreVertical, X, Ban, UserPlus, Smartphone, Settings, Moon, Sun } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTheme } from "./useTheme";
 
 export function Header() {
+  const { dark, toggle } = useTheme();
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -76,6 +78,14 @@ export function Header() {
             </button>
           )}
         </motion.div>
+
+        <button
+          onClick={toggle}
+          aria-label="Toggle theme"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-muted transition-colors hover:bg-secondary"
+        >
+          {dark ? <Sun className="h-5 w-5 text-foreground" /> : <Moon className="h-5 w-5 text-foreground" />}
+        </button>
 
         <button className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-muted transition-colors hover:bg-secondary">
           <Plus className="h-5 w-5 text-foreground" />
