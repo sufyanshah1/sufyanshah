@@ -1,0 +1,46 @@
+import { useMemo, useState } from "react";
+import { Header } from "./Header";
+import { Tabs, type Tab } from "./Tabs";
+import { Recommended } from "./Recommended";
+import { Filters, type Filter } from "./Filters";
+import { CallLogItem } from "./CallLogItem";
+import { BottomNav } from "./BottomNav";
+import { callLogs } from "./data";
+
+export function HomeScreen() {
+  const [tab, setTab] = useState<Tab>("History");
+  const [filter, setFilter] = useState<Filter>("All");
+
+  const filtered = useMemo(() => {
+    return callLogs.filter((l) => {
+      if (filter === "All" || filter === "Default") return true;
+      if (filter === "Verified") return l.verified;
+      if (filter === "Missed") return l.type === "missed";
+      if (filter === "Incoming") return l.type === "incoming";
+      if (filter === "Outgoing") return l.type === "outgoing";
+      return true;
+    });
+  }, [filter]);
+
+  return (
+    <div className="min-h-screen bg-secondary">
+      <div className="mx-auto flex min-h-screen max-w-md flex-col bg-secondary shadow-xl md:my-4 md:min-h-[calc(100vh-2rem)] md:rounded-2xl md:overflow-hidden">
+        <Header />
+        <Tabs active={tab} onChange={setTab} />
+        <Recommended />
+        <Filters active={filter} onChange={setFilter} />
+
+        <main className="flex-1 divide-y divide-border bg-background">
+          {filtered.map((log, i) => (
+            <CallLogItem key={log.id} log={log} index={i} />
+          ))}
+          {filtered.length === 0 && (
+            <p className="py-12 text-center text-sm text-muted-foreground">No calls match this filter.</p>
+          )}
+        </main>
+
+        <BottomNav />
+      </div>
+    </div>
+  );
+}
