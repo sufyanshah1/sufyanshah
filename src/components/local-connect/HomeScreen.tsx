@@ -5,6 +5,7 @@ import { Recommended } from "./Recommended";
 import { Filters, type Filter } from "./Filters";
 import { CallLogItem } from "./CallLogItem";
 import { ContactItem } from "./ContactItem";
+import { FavoriteItem } from "./FavoriteItem";
 import { BottomNav } from "./BottomNav";
 import { callLogs, recommended } from "./data";
 
@@ -33,6 +34,12 @@ export function HomeScreen() {
           <main className="flex-1 divide-y divide-border bg-background">
             {recommended.map((c, i) => (
               <ContactItem key={c.id} contact={c} index={i} />
+            ))}
+          </main>
+        ) : tab === "Favorites" ? (
+          <main className="flex-1 divide-y divide-border bg-background">
+            {recommended.map((c, i) => (
+              <FavoriteItem key={c.id} contact={c} index={i} />
             ))}
           </main>
         ) : (
