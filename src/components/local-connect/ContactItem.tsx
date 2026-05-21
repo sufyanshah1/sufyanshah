@@ -11,7 +11,7 @@ export function ContactItem({ contact, index }: { contact: Contact; index: numbe
       transition={{ delay: index * 0.04, duration: 0.25 }}
       className="flex items-center gap-3 px-4 py-3 transition-colors hover:bg-muted/50"
     >
-      <Avatar name={contact.name} verified={contact.verified} size={48} />
+      <Avatar name={contact.name} size={48} />
       <div className="flex min-w-0 flex-1 items-center gap-1">
         <p className="min-w-0 truncate text-sm font-semibold text-foreground">
           {contact.name}
