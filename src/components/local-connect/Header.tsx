@@ -2,11 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import { Search, Plus, MoreVertical, X, Ban, UserPlus, Smartphone, Settings, Moon, Sun } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "./useTheme";
+import { DefaultSimDialog } from "./DefaultSimDialog";
 
 export function Header() {
   const { dark, toggle } = useTheme();
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [simDialogOpen, setSimDialogOpen] = useState(false);
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -110,7 +112,10 @@ export function Header() {
                 {menuItems.map((item) => (
                   <button
                     key={item.label}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => {
+                      setMenuOpen(false);
+                      if (item.label === "Set Default SIM") setSimDialogOpen(true);
+                    }}
                     className="flex w-full items-center gap-3 px-4 py-3 text-sm text-foreground transition-colors hover:bg-muted"
                   >
                     <item.icon className={`h-4 w-4 ${item.color}`} />
@@ -122,6 +127,7 @@ export function Header() {
           </AnimatePresence>
         </div>
       </div>
+      <DefaultSimDialog open={simDialogOpen} onClose={() => setSimDialogOpen(false)} />
     </header>
   );
 }
