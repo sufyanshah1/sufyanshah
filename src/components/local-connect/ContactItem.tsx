@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Video } from "lucide-react";
+import { Phone, Video, BadgeCheck } from "lucide-react";
 import { Avatar } from "./Avatar";
 import type { Contact } from "./types";
 
