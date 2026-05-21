@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Star, MoreVertical } from "lucide-react";
+import { Phone, Star, MoreVertical, BadgeCheck } from "lucide-react";
 import { Avatar } from "./Avatar";
 import type { Contact } from "./types";
 
@@ -19,9 +19,14 @@ export function FavoriteItem({ contact, index }: { contact: Contact; index: numb
           </span>
         </span>
       </div>
-      <p className="min-w-0 flex-1 truncate text-sm font-semibold text-foreground">
-        {contact.name}
-      </p>
+      <div className="flex min-w-0 flex-1 items-center gap-1">
+        <p className="min-w-0 truncate text-sm font-semibold text-foreground">
+          {contact.name}
+        </p>
+        {contact.verified && (
+          <BadgeCheck className="h-4 w-4 shrink-0 fill-verified text-background" />
+        )}
+      </div>
       <div className="flex items-center gap-1">
         <button
           aria-label="Call"

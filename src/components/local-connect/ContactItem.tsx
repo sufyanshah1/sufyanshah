@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Video } from "lucide-react";
+import { Phone, Video, BadgeCheck } from "lucide-react";
 import { Avatar } from "./Avatar";
 import type { Contact } from "./types";
 
@@ -12,9 +12,14 @@ export function ContactItem({ contact, index }: { contact: Contact; index: numbe
       className="flex items-center gap-3 px-4 py-3 transition-colors hover:bg-muted/50"
     >
       <Avatar name={contact.name} verified={contact.verified} size={48} />
-      <p className="min-w-0 flex-1 truncate text-sm font-semibold text-foreground">
-        {contact.name}
-      </p>
+      <div className="flex min-w-0 flex-1 items-center gap-1">
+        <p className="min-w-0 truncate text-sm font-semibold text-foreground">
+          {contact.name}
+        </p>
+        {contact.verified && (
+          <BadgeCheck className="h-4 w-4 shrink-0 fill-verified text-background" />
+        )}
+      </div>
       <div className="flex items-center gap-2">
         <button
           aria-label="Call"
