@@ -5,6 +5,7 @@ import { Recommended } from "./Recommended";
 import { Filters, type Filter } from "./Filters";
 import { CallLogItem } from "./CallLogItem";
 import { ContactItem } from "./ContactItem";
+import { FavoriteItem } from "./FavoriteItem";
 import { BottomNav } from "./BottomNav";
 import { callLogs, recommended } from "./data";
 
