@@ -36,6 +36,12 @@ export function HomeScreen() {
               <ContactItem key={c.id} contact={c} index={i} />
             ))}
           </main>
+        ) : tab === "Favorites" ? (
+          <main className="flex-1 divide-y divide-border bg-background">
+            {recommended.map((c, i) => (
+              <FavoriteItem key={c.id} contact={c} index={i} />
+            ))}
+          </main>
         ) : (
           <>
             <Filters active={filter} onChange={setFilter} />
