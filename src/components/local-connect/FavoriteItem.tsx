@@ -12,7 +12,7 @@ export function FavoriteItem({ contact, index }: { contact: Contact; index: numb
       className="flex items-center gap-3 px-4 py-3 transition-colors hover:bg-muted/50"
     >
       <div className="relative shrink-0">
-        <Avatar name={contact.name} verified={contact.verified} size={48} />
+        <Avatar name={contact.name} size={48} />
         <span className="absolute -bottom-0.5 -left-0.5 grid h-4 w-4 place-items-center rounded-full bg-background ring-2 ring-background">
           <span className="grid h-4 w-4 place-items-center rounded-full bg-amber-100">
             <Star className="h-2.5 w-2.5 fill-amber-400 text-amber-400" />
