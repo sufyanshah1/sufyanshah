@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Strings -->
+    <string name="app_name">Local Connect</string>
+
+    <!-- Header Strings -->
+    <string name="search_calls">Search calls...</string>
+    <string name="toggle_theme">Toggle theme</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="more_options">More Options</string>
+
+    <!-- Tab Strings -->
+    <string name="tab_history">History</string>
+    <string name="tab_contacts">Contacts</string>
+    <string name="tab_favorites">Favorites</string>
+
+    <!-- Section Headers -->
+    <string name="recommended">Recommended</string>
+
+    <!-- Filter Strings -->
+    <string name="filter_all">All</string>
+    <string name="filter_default">Default</string>
+    <string name="filter_verified">Verified</string>
+    <string name="filter_missed">Missed</string>
+    <string name="filter_incoming">Incoming</string>
+    <string name="filter_outgoing">Outgoing</string>
+
+    <!-- Menu Items -->
+    <string name="menu_block_contact">Block Contact</string>
+    <string name="menu_add_contact">Add Contact</string>
+    <string name="menu_set_default_sim">Set Default SIM</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- Call Log Types -->
+    <string name="spam_label">Spam</string>
+    <string name="sim1">SIM1</string>
+    <string name="sim2">SIM2</string>
+
+    <!-- Buttons -->
+    <string name="call_button">Call</string>
+    <string name="video_button">Video</string>
+    <string name="more_button">More</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_messages">Messages</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Contact Names -->
+    <string name="contact_ayesha">Ayesha Khan</string>
+    <string name="contact_bilal">Bilal Ahmed</string>
+    <string name="contact_sana">Sana Malik</string>
+    <string name="contact_hamza">Hamza Sheikh</string>
+    <string name="contact_zara">Zara Iqbal</string>
+    <string name="contact_usman">Usman Ali</string>
+    <string name="contact_fatima">Fatima Noor</string>
+
+    <!-- Call Times -->
+    <string name="time_this_morning">10:30 AM</string>
+    <string name="time_yesterday">Yesterday</string>
+    <string name="time_two_days">2 days ago</string>
+    <string name="time_three_days">3 days ago</string>
+    <string name="time_four_days">4 days ago</string>
+
+    <!-- Carriers -->
+    <string name="carrier_jazz">Jazz</string>
+    <string name="carrier_zong">Zong</string>
+
+    <!-- Empty State -->
+    <string name="no_calls">No calls match this filter.</string>
+</resources>

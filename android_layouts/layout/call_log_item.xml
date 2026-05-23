@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/call_log_item_height"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/spacing_lg"
+    android:paddingVertical="@dimen/spacing_md"
+    android:gravity="center_vertical"
+    android:spacing="@dimen/spacing_md"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/avatar_md"
+        android:layout_height="@dimen/avatar_md"
+        android:src="@drawable/ic_avatar_placeholder"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/nav_profile" />
+
+    <!-- Contact Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:spacing="@dimen/spacing_xs">
+
+        <!-- Name and Spam Badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:spacing="@dimen/spacing_md"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/font_sm"
+                android:textStyle="bold"
+                android:textColor="@color/foreground"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text="Contact Name" />
+
+            <!-- Spam Badge -->
+            <TextView
+                android:id="@+id/spam_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spam_label"
+                android:textSize="@dimen/font_xs"
+                android:textStyle="bold"
+                android:textColor="@color/danger"
+                android:background="@drawable/spam_badge_background"
+                android:paddingHorizontal="@dimen/spacing_xs"
+                android:paddingVertical="@dimen/spacing_xs"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Call Type and Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:spacing="@dimen/spacing_xs"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/call_type_icon"
+                android:layout_width="@dimen/icon_sm"
+                android:layout_height="@dimen/icon_sm"
+                android:src="@drawable/ic_phone_incoming"
+                android:tint="@color/muted_foreground"
+                android:contentDescription="@string/call_button" />
+
+            <TextView
+                android:id="@+id/call_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_xs"
+                android:textColor="@color/muted_foreground"
+                android:text="10:30 AM" />
+        </LinearLayout>
+
+        <!-- SIM and Carrier Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:spacing="@dimen/spacing_sm"
+            android:gravity="center_vertical">
+
+            <!-- SIM Chip -->
+            <LinearLayout
+                android:id="@+id/sim_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/spacing_md"
+                android:paddingVertical="@dimen/spacing_xs"
+                android:background="@drawable/sim_chip_background"
+                android:spacing="@dimen/spacing_xs"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/sim_icon"
+                    android:layout_width="@dimen/icon_xs"
+                    android:layout_height="@dimen/icon_xs"
+                    android:src="@drawable/ic_smartphone"
+                    android:tint="@color/primary_brand_foreground"
+                    android:contentDescription="@string/nav_profile" />
+
+                <TextView
+                    android:id="@+id/sim_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_xs"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_brand_foreground"
+                    android:text="@string/sim1" />
+            </LinearLayout>
+
+            <!-- Carrier Name -->
+            <TextView
+                android:id="@+id/carrier_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_xs"
+                android:textColor="@color/muted_foreground"
+                android:text="@string/carrier_jazz" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:spacing="@dimen/spacing_md">
+
+        <!-- Call Button -->
+        <ImageButton
+            android:id="@+id/call_btn"
+            android:layout_width="@dimen/button_width_icon"
+            android:layout_height="@dimen/button_width_icon"
+            android:src="@drawable/ic_phone"
+            android:contentDescription="@string/call_button"
+            android:background="@drawable/call_button_background"
+            android:tint="@color/primary_brand_foreground"
+            android:scaleType="centerInside" />
+
+        <!-- Video Button -->
+        <ImageButton
+            android:id="@+id/video_btn"
+            android:layout_width="@dimen/button_width_icon"
+            android:layout_height="@dimen/button_width_icon"
+            android:src="@drawable/ic_video"
+            android:contentDescription="@string/video_button"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/foreground"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+</LinearLayout>

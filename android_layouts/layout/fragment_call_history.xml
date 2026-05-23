@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Filters -->
+    <include layout="@layout/filters" />
+
+    <!-- Call History List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/call_history_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:divider="?attr/listDivider" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_calls"
+        android:textSize="@dimen/font_sm"
+        android:textColor="@color/muted_foreground"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/spacing_lg"
+        android:visibility="gone" />
+
+</LinearLayout>

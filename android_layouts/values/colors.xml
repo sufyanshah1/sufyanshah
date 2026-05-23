@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary_brand">#2563EB</color>
+    <color name="primary_brand_foreground">#FFFFFF</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="secondary_background">#F3F4F6</color>
+    <color name="muted">#E5E7EB</color>
+
+    <!-- Text Colors -->
+    <color name="foreground">#1F2937</color>
+    <color name="muted_foreground">#6B7280</color>
+
+    <!-- Border Colors -->
+    <color name="border">#D1D5DB</color>
+
+    <!-- Status Colors -->
+    <color name="verified">#10B981</color>
+    <color name="danger">#EF4444</color>
+    <color name="warning">#F59E0B</color>
+    <color name="success">#10B981</color>
+
+    <!-- SIM Colors -->
+    <color name="sim1_bg">#3B82F6</color>
+    <color name="sim1_text">#FFFFFF</color>
+    <color name="sim2_bg">#8B5CF6</color>
+    <color name="sim2_text">#FFFFFF</color>
+
+    <!-- Card and UI -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_border">#E5E7EB</color>
+
+    <!-- Dark Mode -->
+    <color name="dark_background">#1F2937</color>
+    <color name="dark_secondary">#111827</color>
+    <color name="dark_foreground">#F3F4F6</color>
+    <color name="dark_muted">#374151</color>
+    <color name="dark_muted_foreground">#9CA3AF</color>
+
+    <!-- Accent Colors -->
+    <color name="amber_100">#FEF3C7</color>
+    <color name="amber_400">#FBBF24</color>
+</resources>

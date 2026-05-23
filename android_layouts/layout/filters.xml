@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingVertical="@dimen/spacing_md"
+    android:paddingHorizontal="@dimen/spacing_lg"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/filters_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:spacing="@dimen/spacing_md" />
+
+</HorizontalScrollView>

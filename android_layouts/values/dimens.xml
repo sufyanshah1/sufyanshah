@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing (8px grid) -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">20dp</dimen>
+    <dimen name="spacing_2xl">24dp</dimen>
+    <dimen name="spacing_3xl">32dp</dimen>
+
+    <!-- Font Sizes -->
+    <dimen name="font_xs">10sp</dimen>
+    <dimen name="font_sm">12sp</dimen>
+    <dimen name="font_base">14sp</dimen>
+    <dimen name="font_lg">16sp</dimen>
+    <dimen name="font_xl">18sp</dimen>
+    <dimen name="font_2xl">20sp</dimen>
+
+    <!-- Avatar Sizes -->
+    <dimen name="avatar_xs">32dp</dimen>
+    <dimen name="avatar_sm">40dp</dimen>
+    <dimen name="avatar_md">48dp</dimen>
+    <dimen name="avatar_lg">64dp</dimen>
+
+    <!-- Button Sizes -->
+    <dimen name="button_height_sm">32dp</dimen>
+    <dimen name="button_height_md">40dp</dimen>
+    <dimen name="button_height_lg">48dp</dimen>
+    <dimen name="button_width_icon">40dp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="radius_sm">4dp</dimen>
+    <dimen name="radius_md">8dp</dimen>
+    <dimen name="radius_lg">12dp</dimen>
+    <dimen name="radius_full">24dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_xs">12dp</dimen>
+    <dimen name="icon_sm">16dp</dimen>
+    <dimen name="icon_md">20dp</dimen>
+    <dimen name="icon_lg">24dp</dimen>
+    <dimen name="icon_xl">32dp</dimen>
+
+    <!-- Divider -->
+    <dimen name="divider_height">0.5dp</dimen>
+
+    <!-- Shadow Elevation -->
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">4dp</dimen>
+    <dimen name="elevation_lg">8dp</dimen>
+
+    <!-- Item Heights -->
+    <dimen name="call_log_item_height">80dp</dimen>
+    <dimen name="contact_item_height">72dp</dimen>
+    <dimen name="recommended_item_width">80dp</dimen>
+
+    <!-- Header and Nav -->
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="bottom_nav_height">56dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+</resources>

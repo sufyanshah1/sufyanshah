@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tab_height"
+    android:orientation="horizontal"
+    android:background="@color/background"
+    android:borderlessButtonStyle="?attr/borderlessButtonStyle">
+
+    <!-- Tab History -->
+    <FrameLayout
+        android:id="@+id/tab_history"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tab_history"
+            android:textSize="@dimen/font_sm"
+            android:textStyle="bold"
+            android:textColor="@color/primary_brand"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground" />
+
+        <!-- Tab Indicator -->
+        <View
+            android:id="@+id/history_indicator"
+            android:layout_width="48dp"
+            android:layout_height="2dp"
+            android:background="@color/primary_brand"
+            android:layout_gravity="bottom|center_horizontal" />
+    </FrameLayout>
+
+    <!-- Tab Contacts -->
+    <FrameLayout
+        android:id="@+id/tab_contacts"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tab_contacts"
+            android:textSize="@dimen/font_sm"
+            android:textStyle="bold"
+            android:textColor="@color/muted_foreground"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground" />
+    </FrameLayout>
+
+    <!-- Tab Favorites -->
+    <FrameLayout
+        android:id="@+id/tab_favorites"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tab_favorites"
+            android:textSize="@dimen/font_sm"
+            android:textStyle="bold"
+            android:textColor="@color/muted_foreground"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground" />
+    </FrameLayout>
+
+    <!-- Menu Button -->
+    <ImageButton
+        android:id="@+id/tabs_menu_btn"
+        android:layout_width="@dimen/button_width_icon"
+        android:layout_height="@dimen/button_width_icon"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/spacing_md"
+        android:src="@drawable/ic_menu"
+        android:contentDescription="@string/more_options"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="@color/muted_foreground" />
+
+</LinearLayout>

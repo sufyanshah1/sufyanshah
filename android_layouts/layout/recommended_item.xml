@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/recommended_item_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:spacing="@dimen/spacing_md">
+
+    <!-- Avatar -->
+    <FrameLayout
+        android:layout_width="@dimen/avatar_lg"
+        android:layout_height="@dimen/avatar_lg">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_avatar_placeholder"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/nav_profile" />
+
+        <!-- Verified Badge -->
+        <ImageView
+            android:id="@+id/verified_badge"
+            android:layout_width="@dimen/icon_lg"
+            android:layout_height="@dimen/icon_lg"
+            android:src="@drawable/ic_badge_check"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/tab_contacts"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Contact Name -->
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_xs"
+        android:textColor="@color/foreground"
+        android:gravity="center"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="Contact Name" />
+
+</LinearLayout>
