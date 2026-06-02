@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    For You bottom sheet
+    Use as the content view of a BottomSheetDialogFragment.
+    Apply a top-rounded background drawable (see drawable/bg_bottom_sheet.xml)
+    to the BottomSheetDialog's root via a custom style.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:elevation="@dimen/elevation_lg">
+
+    <!-- Header: title centered, close on the right -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/spacing_lg"
+        android:paddingTop="@dimen/spacing_xl"
+        android:paddingBottom="@dimen/spacing_lg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/for_you_title"
+            android:textColor="@color/foreground"
+            android:textSize="@dimen/font_lg"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/for_you_close_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_close"
+            android:tint="@color/foreground" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/border" />
+
+    <!-- Sort by -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/spacing_lg"
+        android:paddingVertical="@dimen/spacing_xl">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sort_by"
+            android:textColor="@color/foreground"
+            android:textSize="@dimen/font_lg" />
+
+        <!-- A-Z option -->
+        <LinearLayout
+            android:id="@+id/sort_az"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_sort_az"
+                android:tint="@color/foreground"
+                android:contentDescription="@string/sort_az" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:text="@string/sort_az"
+                android:textColor="@color/muted_foreground"
+                android:textSize="@dimen/font_sm" />
+        </LinearLayout>
+
+        <!-- Usage option (selected) -->
+        <LinearLayout
+            android:id="@+id/sort_usage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_2xl"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_sort_usage"
+                android:tint="@color/primary_brand"
+                android:contentDescription="@string/sort_usage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:text="@string/sort_usage"
+                android:textColor="@color/primary_brand"
+                android:textSize="@dimen/font_sm"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/border" />
+
+    <!-- View -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/spacing_lg"
+        android:paddingVertical="@dimen/spacing_xl">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/view_label"
+            android:textColor="@color/foreground"
+            android:textSize="@dimen/font_lg" />
+
+        <ImageButton
+            android:id="@+id/view_list"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/view_list"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_view_list"
+            android:tint="@color/primary_brand" />
+
+        <ImageButton
+            android:id="@+id/view_grid_compact"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/spacing_xl"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/view_grid_compact"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_view_grid_compact"
+            android:tint="@color/foreground" />
+
+        <ImageButton
+            android:id="@+id/view_grid_medium"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/spacing_xl"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/view_grid_medium"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_view_grid_medium"
+            android:tint="@color/foreground" />
+
+        <ImageButton
+            android:id="@+id/view_grid_large"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/spacing_xl"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/view_grid_large"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_view_grid_large"
+            android:tint="@color/foreground" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_lg" />
+
+</LinearLayout>
